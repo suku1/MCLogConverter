@@ -67,13 +67,14 @@ def conv(root, fname, backup=''):
     print('complete.\n')
 
 def main():
-    root = 'C:/Users/User/AppData/Roaming/.minecraft/logs'
+    root = 'C:/Users/User/AppData/Roaming/.minecraft/logs'#ログフォルダ
+    backup = ''#バックアップ用フォルダ
     add_patterns()
     ls = os.listdir(root)
     length = str(len(ls))
     for i, name in enumerate(ls):
         print(str(i+1) + '/' + length + ' files')
-        conv(root, name)
+        conv(root, name, backup)
 
 if __name__ == '__main__':
     main()
